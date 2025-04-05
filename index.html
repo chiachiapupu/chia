@@ -1,117 +1,176 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>Jolene 的手作世界</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fffdf9;
-            color: #4b3832;
-            transition: all 0.5s ease;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我是誰？一個會看樹也會寫網頁的女子</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .intro {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #f7e9e3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            animation: fadeOut 2s ease 2s forwards;
-        }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
 
-        .intro h1 {
-            font-size: 2.5em;
-            color: #c97b63;
-        }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
+    }
 
-        @keyframes fadeOut {
-            to {
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
+    p {
+      font-size: 1.2em;
+      color: #666;
+    }
 
-        header {
-            background-color: #f9f1ec;
-            padding: 2em;
-            text-align: center;
-        }
+    .image-section {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        section {
-            padding: 2em;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .image-section img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
 
-        h2 {
-            color: #b28b84;
-        }
+    .image-caption {
+      margin-top: 10px;
+      text-align: center;
+      font-style: italic;
+      color: #555;
+    }
 
-        a {
-            color: #a86e58;
-            text-decoration: none;
-        }
+    button {
+      background-color: #ffaaaa;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    button:hover {
+      background-color: #ff8888;
+    }
 
-        footer {
-            background-color: #f9f1ec;
-            padding: 1em;
-            text-align: center;
-            font-size: 0.9em;
-        }
+    #message {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #444;
+      display: none;
+      animation: fadeUp 1s ease-out forwards;
+    }
 
-        .brand-title {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 0.5em;
-        }
-    </style>
+    footer {
+      margin-top: 80px;
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    form {
+      margin-top: 40px;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    .form-title {
+      font-weight: bold;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <div class="intro">
-        <h1>關於 JOLENE</h1>
-    </div>
 
-    <header>
-        <h1>手作人 Jolene</h1>
-        <p class="brand-title">Balloon0079 & 90.handmade</p>
-    </header>
+  <!-- 背景音樂 -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2023/04/07/audio_90f9cbb6d6.mp3" type="audio/mpeg">
+  </audio>
 
-    <section>
-        <h2>自我介紹</h2>
-        <p>INFJ，害羞內向但朋友都不認同（笑）。喜歡手作品、有巧思、有創意！
-        自 2012 年起開始手作造型氣球，從平面到立體氣球公仔、花束與編織造型，一步步提升技能；
-        2024 年接觸了毛線勾織，創作溫暖療癒的作品，如雲朵般柔軟的手勾包、水晶設計款串珠，療癒每一個當下。</p>
-        <p>也喜歡數字分析，曾任財務會計、現任工作經營管理師，擅長 Excel 操作，近期目標是加強更多自動化學習。</p>
-    </section>
+  <header class="fade-in">
+    <h1>你的名字</h1>
+    <p>一個會看樹也會寫網頁的神秘女子</p>
+  </header>
 
-    <section>
-        <h2>作品集</h2>
-        <p>
-            <a href="https://www.instagram.com/balloon0079?igsh=Y3Z2b2drajg3NmR3&utm_source=qr" target="_blank">Balloon0079 Instagram</a><br>
-            <a href="https://www.instagram.com/90.handmade?igsh=MTJ2ajZheHpwMXF4dQ%3D%3D&utm_source=qr" target="_blank">90.handmade Instagram</a>
-        </p>
-    </section>
+  <div class="image-section fade-in" style="animation-delay: 0.5s;">
+    <img src="https://i.imgur.com/lTxhtVO.jpg" alt="穩定到讓人想嫁的那棵樹">
+    <div class="image-caption">樹，靜靜地站著，就贏過80%的男人</div>
+  </div>
 
-    <section>
-        <h2>聯絡方式</h2>
-        <p>請透過 Instagram 私訊我：<br>
-            @90.handmade 或 @balloon0079</p>
-    </section>
+  <div class="fade-in" style="animation-delay: 1.2s;">
+    <button onclick="showMessage()">點我一下（我會說真話）</button>
+    <div id="message">妳真的還會回來看這頁欸，好不容易哦。</div>
+  </div>
 
-    <footer>
-        &copy; 2025 Jolene｜Balloon0079 & 90.handmade
-    </footer>
+  <div class="fade-in" style="animation-delay: 2s;">
+    <p class="form-title">想說點什麼（雖然表單不會送出，但寫了心情會好一點）</p>
+    <form>
+      <input type="text" placeholder="你的名字（可留可不留）">
+      <textarea rows="4" placeholder="你現在的感覺是？"></textarea>
+      <button type="button" onclick="alert('沒真的送出，但我懂你')">假裝送出</button>
+    </form>
+  </div>
+
+  <div class="fade-in" style="animation-delay: 2.5s;">
+    <p>你可以邊聽邊看這頁（超有感）</p>
+    <a href="https://www.youtube.com/watch?v=onZfB5sAUAU" target="_blank">
+      <button>播放《紅豆》by 方大同</button>
+    </a>
+  </div>
+
+  <!-- 訪客計數器 -->
+  <div class="fade-in" style="animation-delay: 3s; margin-top: 50px;">
+    <p>這頁已被凝視：</p>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=1234567&style=0038&nbdigits=5&type=page&initCount=00001" title="Web Counter" alt="visitor counter" border="0" />
+    <p>次（也許其中一次是妳在夜深人靜的時候）</p>
+  </div>
+
+  <footer class="fade-in" style="animation-delay: 3.5s;">
+    © 2025 你自己。版權？不重要，美感比較重要。
+  </footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+
 </body>
 </html>
